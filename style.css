@@ -1,0 +1,123 @@
+/* General settings */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+	position: relative;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.4rem; /* 14px */
+}
+
+/* Toolbar styling */
+
+.toolbar {
+	position: absolute;
+	top: 32px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 8px;
+	max-width: 100%;
+	padding: 16px;
+	background-color: #eeeeee;
+	border: 1px solid #cccccc;
+	border-radius: 16px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	font-family: sans-serif;
+	font-size: 1.3rem;
+	overflow: hidden;
+}
+
+.toolbar__input-group {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding-left: 8px;
+	background-color: #ffffff;
+	border: 1px solid #dddddd;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.toolbar__input-group:has(.toolbar__input:focus) {
+	outline: 1px solid #0000ff;
+}
+
+.toolbar__label {
+	color: #888888;
+	white-space: nowrap;
+}
+
+.toolbar__label:has(+ .toolbar__input[type="number"]) {
+	cursor: ew-resize;
+}
+
+.toolbar__input {
+	flex: 1;
+	width: 80px;
+	height: 28px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font: inherit;
+}
+
+.toolbar__input[type="number"] {
+	width: 48px;
+}
+
+.toolbar__input[type="color"] {
+	width: 48px;
+	border-left: 1px solid #dddddd;
+	-webkit-appearance: none;
+}
+
+.toolbar__input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+
+.toolbar__input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+.toolbar__input--wide {
+	width: 128px;
+}
+
+.toolbar__button {
+	height: 28px;
+	padding: 0 16px;
+	background-color: #000000;
+	border: 1px solid #000000;
+	border-radius: 4px;
+	color: #ffffff;
+	font-weight: 700;
+	white-space: nowrap;
+	border: none;
+	cursor: pointer;
+}
+
+.toolbar__button:first-of-type {
+	margin-left: 24px;
+}
+
+/* Render div styling */
+#render {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: calc(100vh - 72px); /* Adjust for toolbar height and padding */
+}
+
+#size-label,
+#border-radius-label {
+	cursor: ew-resize !important;
+}

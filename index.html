@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FontAwesome Styling Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+    <script src="all.min.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <div class="toolbar__input-group">
+            <label for="icon" class="toolbar__label">Icon</label>
+            <input type="text" name="icon" id="icon" class="toolbar__input" value="piggy-bank" autocomplete="off">
+        </div>
+        <div class="toolbar__input-group">
+            <label for="style" class="toolbar__label">Style</label>
+            <select name="style" id="style" class="toolbar__input">
+                <option value="fa-solid">Solid</option>
+                <option value="fa-regular">Regular</option>
+                <option value="fa-light" selected>Light</option>
+                <option value="fa-thin">Thin</option>
+                <option value="fa-duotone" disabled>Duotone</option>
+            </select>
+        </div>
+        <div class="toolbar__input-group">
+            <label for="size" class="toolbar__label" id="size-label">Size</label>
+            <input type="number" name="size" id="size" class="toolbar__input" value="80" autocomplete="off">
+        </div>
+        <div class="toolbar__input-group">
+            <label for="color" class="toolbar__label">Color</label>
+            <select name="color" id="color" class="toolbar__input toolbar__input--wide">
+                <option value="#a91523" selected>Ent Red (#a91523)</option>
+                <option value="#1125a9">Ent Blue (#1125a9)</option>
+                <option value="#fec830">Ent Yellow (#fec830)</option>
+                <option value="#fc4c02">Broncos Orange (#fc4c02)</option>
+                <option value="#0a2343">Broncos Blue (#0a2343)</option>
+                <option value="#000000">Black (#000000)</option>
+                <option value="#ffffff">White (#ffffff)</option>
+                <option value="custom">Custom</option>
+            </select>
+        </div>
+        <div class="toolbar__input-group">
+            <label for="custom-color" class="toolbar__label">Custom Color</label>
+            <input type="color" name="custom-color" id="custom-color" class="toolbar__input" autocomplete="off">
+        </div>
+        <div class="toolbar__input-group">
+            <label for="shape" class="toolbar__label">Shape</label>
+            <select name="shape" id="shape" class="toolbar__input">
+                <option value="none" selected>None</option>
+                <option value="square">Square</option>
+                <option value="circle">Circle</option>
+            </select>
+        </div>
+        <div class="toolbar__input-group">
+            <label for="border-radius" class="toolbar__label" id="border-radius-label">Radius</label>
+            <input type="number" name="border-radius" id="border-radius" class="toolbar__input" value="4" autocomplete="off">
+        </div>
+        <button class="toolbar__button toolbar__button--download">Download SVG</button>
+        <button class="toolbar__button toolbar__button--download">Download PNG</button>
+    </div>
+    <div id="render"></div>
+</body>
+</html>
